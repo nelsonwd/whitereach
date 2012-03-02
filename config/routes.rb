@@ -1,4 +1,13 @@
 White::Application.routes.draw do
+  get "pages/main"
+  get "pages/ourteam"
+  get "pages/targetindustries"
+  get "pages/media"
+  get "pages/projectportfolio"
+  get "pages/services"
+  get "pages/livecameras"
+  get "pages/contactus"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -49,6 +58,7 @@ White::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  root :to => 'pages#main'
 
   # See how all your routes lay out with "rake routes"
 

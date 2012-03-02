@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>White</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<title>Home - White Reach</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="index,follow" />
+
+<link href="/stylesheet.css" rel="stylesheet" type="text/css" />
+
+<!--<script src="http://www.white-reach.com/javascript/jquery.js" language="javascript"></script>
+<script src="http://www.white-reach.com/javascript/jquery.ifixpng.js" language="javascript"></script>
+<script src="http://www.white-reach.com/javascript/functions.js" language="javascript"></script>
+<script src="http://www.white-reach.com/sifr2.0.7.js" language="javascript"></script>-->
 </head>
+
 <body>
+<div id="bodyContainer">
+<div id="bodyWidthContainer">
+  <div id="header">
+	<div id="home">
+          <img src="/images/white_logo.png" width="231" height="132" border="0" style="border: medium none ; margin: 0pt auto; padding: 0pt;">
+	</div>
+    <ul id="mainNav">
+      <li id="nav1"><a  <%=@nav1%> href="/pages/main"></a></li>
+      <li id="nav2"><a  <%=@nav2%> href="/pages/ourteam"></a></li>
+      <li id="nav3"><a  <%=@nav3%> href="/pages/targetindustries"></a></li>
+      <li id="nav4"><a  <%=@nav4%> href="/pages/media"></a></li>
+      <li id="nav5"><a  <%=@nav5%> href="/pages/projectportfolio"></a></li>
+      <li id="nav6"><a  <%=@nav6%> href="/pages/services"></a></li>
+      <li id="nav7"><a  <%=@nav7%> href="/pages/livecameras"></a></li>
+      <li id="nav8"><a  <%=@nav8%> href="/pages/contactus"></a></li>
+    </ul>
+  </div>
+		<div id="middleBody">
+			<div id="leftBlock">
+							<form style="margin-left:-6px;" method="post" action="/index.php">
+				<table border="0" cellspacing="0" cellpadding="1">
+				  <tr>
+					<td><span style="font-size:10px; color:#9b9b9b;">&nbsp;Username:</span><br /><input type="text" name="username" value="" class="form loginField" style="background-attachment:fixed; background:url(images/username.gif) no-repeat top center; width:151px; height:20px; padding:2px 2px 2px 2px; border:none; color:#9b9b9b; margin-left:2px;" /></td>
+				  </tr>
+				  <tr>
+				  	<td><div style="font-size:10px; color:#9b9b9b; margin-top:15px;">&nbsp;Password:</div><input type="password" name="password" value="" class="form loginField" style="background-attachment:fixed; background:url(images/password.gif) no-repeat top center; width:129px; height:20px; margin:2px 2px 2px 2px; padding:2px; border:none; color:#9b9b9b;" /></td>
+				  </tr>
+				  <tr>
+				  	<td><div style="font-size:10px; color:#9b9b9b; margin-top:15px;"></div><input type="image" src="/images/login.gif" type="submit" value="Login" style="width:114px; height:20px; border:0; margin-left:6px; padding:2px 2px 2px 0;" /></td>
+				  </tr>
+				</table>
+				<input name="whatareyoudoing" type="hidden" value="iamalogingin" />
+				</form>
+</div>
+<div id="rightBlock"> 
 
 <%= yield %>
 
+<div id="footer">
+					<a href="http://www.elinkdesign.com/" target="_blank">Wesite Design</a> By eLink Design, Inc. and <a href="http://www.intelliwire.net/" target="_blank">Web Hosting</a> By Intelliwire, Inc.<br />
+			&copy;2012 White Reach. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+	<!--
+	$(".clearAnchor").html('');
+	-->
+	</script>
 </body>
 </html>
+
